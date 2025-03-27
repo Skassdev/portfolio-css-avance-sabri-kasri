@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Portfolio CSS</div>
+                <ul class="menu">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#apropos">À propos</a></li>
+                    <li><a href="#competences">Compétences</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hello, je suis <span>Sabri Kasri</span></h1>
+                <h2>Développeur Web</h2>
+                <p>Passionné par l'informatique</p>
+                <div class="hero-btns">
+                    <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="apropos" class="about">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Je suis étudiant en Bachelor Développement Web et passionné par la création de sites et d'applications modernes. J'aime concevoir des projets à la fois beaux et pratiques.</p>  
+                    <p>Mon objectif est de créer des solutions web simples et efficaces qui répondent aux besoins des utilisateurs.</p>
+
+                    <div class="about-info">
+                        <div class="info-item">
+                            <h3>1+</h3>
+                            <p>Années d'expérience</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>10+</h3>
+                            <p>Projets terminés</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>10+</h3>
+                            <p>Technologie apprise</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-box"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences" class="skills">
+        <div class="container">
+            <h2 class="section-title">Mes compétences</h2>
+            <div class="skills-container">
+                <div class="skill-group">
+                    <h3>Frontend</h3>
+                    <div class="skill">
+                        <div class="skill-name">HTML5</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">CSS3/SASS</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">JavaScript</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-group">
+                    <h3>Backend</h3>
+                    <div class="skill">
+                        <div class="skill-name">PHP</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Node.js</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">MySQL</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-group">
+                    <h3>Outils</h3>
+                    <div class="skill">
+                        <div class="skill-name">Git</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Figma</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">VS Code</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="projects">
+        <div class="container">
+            <h2 class="section-title">Mes projets</h2>
+            <div class="project-filters">
+                <button class="filter active" data-filter="all">Tous</button>
+                <button class="filter" data-filter="web">Web</button>
+                <button class="filter" data-filter="design">Design</button>
+                <button class="filter" data-filter="app">App</button>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-bg"></div>
+                        <div class="project-overlay">
+                            <a href="#" class="btn btn-sm">Voir le projet</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Site e-commerce</h3>
+                        <p>Développement d'une boutique en ligne complète avec système de paiement</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <div class="project-bg bg-2"></div>
+                        <div class="project-overlay">
+                            <a href="#" class="btn btn-sm">Voir le projet</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Refonte UI/UX</h3>
+                        <p>Redesign complet de l'interface utilisateur d'une application mobile</p>
+                        <div class="project-tags">
+                            <span>Figma</span>
+                            <span>Design</span>
+                            <span>UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="app">
+                    <div class="project-image">
+                        <div class="project-bg bg-3"></div>
+                        <div class="project-overlay">
+                            <a href="#" class="btn btn-sm">Voir le projet</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Application mobile</h3>
+                        <p>Développement d'une application de suivi d'activité sportive</p>
+                        <div class="project-tags">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>App</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-bg bg-4"></div>
+                        <div class="project-overlay">
+                            <a href="#" class="btn btn-sm">Voir le projet</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Plateforme éducative</h3>
+                        <p>Création d'une plateforme de cours en ligne avec système de progression</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <div class="project-bg bg-5"></div>
+                        <div class="project-overlay">
+                            <a href="#" class="btn btn-sm">Voir le projet</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Design de logo</h3>
+                        <p>Conception d'identité visuelle pour une startup technologique</p>
+                        <div class="project-tags">
+                            <span>Illustrator</span>
+                            <span>Branding</span>
+                            <span>Logo</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="app">
+                    <div class="project-image">
+                        <div class="project-bg bg-6"></div>
+                        <div class="project-overlay">
+                            <a href="#" class="btn btn-sm">Voir le projet</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Dashboard admin</h3>
+                        <p>Interface d'administration pour gérer les utilisateurs et les données</p>
+                        <div class="project-tags">
+                            <span>Vue.js</span>
+                            <span>Chart.js</span>
+                            <span>API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-moi</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>contact@exemple.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Téléphone</h3>
+                            <p>+33 6 12 34 56 78</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Adresse</h3>
+                            <p>Paris, France</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Sujet" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Votre message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Portfolio</div>
+                <div class="footer-links">
+                    <a href="#accueil">Accueil</a>
+                    <a href="#apropos">À propos</a>
+                    <a href="#competences">Compétences</a>
+                    <a href="#projets">Projets</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sabri Kasri - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

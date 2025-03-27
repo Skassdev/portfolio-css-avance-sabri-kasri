@@ -1,0 +1,146 @@
+// Header et navigation
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $color-white;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar {
+    @include flex-between;
+    padding: $spacing-medium 0;
+  }
+  
+  .logo {
+    font-size: $font-size-large;
+    font-weight: 700;
+    color: $color-primary;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: $spacing-medium;
+    
+    @include tablet {
+      display: none;
+      
+      &.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: $color-white;
+        padding: $spacing-medium;
+      }
+    }
+    
+    a {
+      color: $color-dark;
+      font-weight: 500;
+      transition: 0.3s ease;
+      
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+  
+  .menu-toggle {
+    display: none;
+    
+    @include tablet {
+      display: block;
+      cursor: pointer;
+    }
+  }
+  
+  // Hero section
+  .hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+    
+    h1 {
+      font-size: $font-size-xlarge;
+      margin-bottom: $spacing-medium;
+      
+      span {
+        color: $color-primary;
+      }
+    }
+    
+    p {
+      margin-bottom: $spacing-large;
+    }
+  }
+  
+  // Grille pour les sections
+  .grid {
+    display: grid;
+    gap: $spacing-medium;
+  }
+  
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+    
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  // Footer
+  .footer {
+    background-color: $color-dark;
+    color: $color-white;
+    padding: $spacing-large 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    @include flex-between;
+    margin-bottom: $spacing-large;
+    
+    @include mobile {
+      flex-direction: column;
+      gap: $spacing-medium;
+    }
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: $spacing-medium;
+    
+    @include mobile {
+      justify-content: center;
+    }
+    
+    a {
+      color: $color-light;
+      
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }

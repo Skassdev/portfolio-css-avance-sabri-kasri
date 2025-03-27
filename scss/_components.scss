@@ -1,0 +1,239 @@
+/* Boutons */
+.btn {
+    display: inline-block;
+    padding: $spacing-sm $spacing-lg;
+    border-radius: $border-radius;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: $box-shadow;
+    }
+  }
+  
+  .btn-primary {
+    background-color: $primary-color;
+    color: $white-color;
+    
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+    
+    &:hover {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+  
+  .btn-sm {
+    padding: $spacing-xs $spacing-md;
+    font-size: $font-size-sm;
+  }
+  
+  /* Cards de projet */
+  .project-card {
+    background-color: $white-color;
+    border-radius: $border-radius-lg;
+    overflow: hidden;
+    box-shadow: $box-shadow;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-10px);
+      
+      .project-overlay {
+        opacity: 1;
+      }
+      
+      .project-bg {
+        transform: scale(1.1);
+      }
+    }
+  }
+  
+  .project-image {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .project-bg {
+    width: 100%;
+    height: 100%;
+    background-color: $primary-color;
+    transition: all 0.3s ease;
+    background-image: linear-gradient(45deg, $primary-color, $secondary-color);
+    
+    &.bg-2 {
+      background-image: linear-gradient(45deg, #6b48ff, #fe4aef);
+    }
+    
+    &.bg-3 {
+      background-image: linear-gradient(45deg, #0ca4e8, #6a82fb);
+    }
+    
+    &.bg-4 {
+      background-image: linear-gradient(45deg, #f857a6, #ff5858);
+    }
+    
+    &.bg-5 {
+      background-image: linear-gradient(45deg, #11998e, #38ef7d);
+    }
+    
+    &.bg-6 {
+      background-image: linear-gradient(45deg, #f2994a, #f2c94c);
+    }
+  }
+  
+  .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($dark-color, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .project-info {
+    padding: $spacing-md;
+    
+    h3 {
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-sm;
+    }
+    
+    p {
+      color: $grey-color;
+      font-size: $font-size-sm;
+      margin-bottom: $spacing-md;
+    }
+  }
+  
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+    
+    span {
+      background-color: rgba($primary-color, 0.1);
+      color: $primary-color;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: $font-size-sm;
+    }
+  }
+  
+  /* Filtres */
+  .project-filters {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-md;
+    margin-bottom: $spacing-xl;
+    flex-wrap: wrap;
+  }
+  
+  .filter {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: $spacing-xs $spacing-md;
+    border-radius: $border-radius;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    
+    &:hover, &.active {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+  
+  /* Formulaires */
+  .form-group {
+    margin-bottom: $spacing-md;
+    
+    input, textarea {
+      width: 100%;
+      padding: $spacing-md;
+      border: 1px solid rgba($grey-color, 0.2);
+      border-radius: $border-radius;
+      font-family: $font-primary;
+      font-size: $font-size-base;
+      transition: all 0.3s ease;
+      
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+      }
+    }
+    
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+  }
+  
+  /* Barres de compétences */
+  .skill {
+    margin-bottom: $spacing-md;
+  }
+  
+  .skill-name {
+    font-weight: 500;
+    margin-bottom: $spacing-xs;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .skill-bar {
+    height: 8px;
+    background-color: rgba($primary-color, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .skill-level {
+    height: 100%;
+    background-color: $primary-color;
+    border-radius: 4px;
+    transition: width 1s ease;
+  }
+  
+  /* Icones sociales */
+  .social-links {
+    display: flex;
+    gap: $spacing-md;
+    margin-top: $spacing-lg;
+    
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba($white-color, 0.1);
+      border-radius: 50%;
+      color: $white-color;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background-color: $primary-color;
+        transform: translateY(-3px);
+      }
+    }
+  }

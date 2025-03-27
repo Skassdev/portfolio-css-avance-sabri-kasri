@@ -1,0 +1,230 @@
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: $font-primary;
+    font-size: $font-size-base;
+    line-height: 1.6;
+    color: $dark-color;
+    background-color: $white-color;
+    overflow-x: hidden;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  p {
+    margin-bottom: $spacing-md;
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+  }
+  
+  /* Section générale */
+  section {
+    padding: $spacing-xl 0;
+  }
+  
+  .section-title {
+    font-size: $font-size-xxl;
+    text-align: center;
+    margin-bottom: $spacing-xl;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 4px;
+      background-color: $primary-color;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+  }
+  
+  /* Header et Navigation */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba($white-color, 0.95);
+    box-shadow: $box-shadow;
+    z-index: 1000;
+    padding: $spacing-md 0;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: $font-size-xl;
+    font-weight: 700;
+    color: $primary-color;
+  }
+  
+  .menu {
+    display: flex;
+    gap: $spacing-md;
+    
+    @media (max-width: $tablet) {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: $white-color;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+      box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1001;
+      
+      &.active {
+        right: 0;
+      }
+    }
+    
+    li {
+      a {
+        font-weight: 500;
+        padding: $spacing-xs $spacing-md;
+        border-radius: $border-radius;
+        
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  
+  .menu-btn {
+    display: none;
+    font-size: $font-size-lg;
+    cursor: pointer;
+    z-index: 1002;
+    
+    @media (max-width: $tablet) {
+      display: block;
+    }
+  }
+  
+  /* Footer */
+  footer {
+    background-color: $dark-color;
+    color: $white-color;
+    padding: $spacing-xl 0 $spacing-md;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-lg;
+    
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: $spacing-md;
+    }
+  }
+  
+  .footer-logo {
+    font-size: $font-size-xl;
+    font-weight: 700;
+    color: $primary-color;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: $spacing-lg;
+    
+    @media (max-width: $mobile) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: $spacing-md;
+    }
+    
+    a {
+      color: $light-color;
+      
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: $spacing-md;
+    border-top: 1px solid rgba($light-color, 0.1);
+    
+    p {
+      font-size: $font-size-sm;
+      margin-bottom: 0;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  .slide-up {
+    animation: slideUp 0.8s ease forwards;
+  }
