@@ -1,4 +1,4 @@
-/* Boutons */
+
 .btn {
     display: inline-block;
     padding: $spacing-sm $spacing-lg;
@@ -41,7 +41,7 @@
     font-size: $font-size-sm;
   }
   
-  /* Cards de projet */
+  /* Cardsss de projet */
   .project-card {
     background-color: $white-color;
     border-radius: $border-radius-lg;
@@ -138,8 +138,7 @@
       font-size: $font-size-sm;
     }
   }
-  
-  /* Filtres */
+ 
   .project-filters {
     display: flex;
     justify-content: center;
@@ -188,7 +187,7 @@
     }
   }
   
-  /* Barres de compétences */
+
   .skill {
     margin-bottom: $spacing-md;
   }
